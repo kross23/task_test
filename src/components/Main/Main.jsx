@@ -28,28 +28,63 @@ z-index: 100;
 const Main = () => {
     const [stateUser, setstateUser] = useState(null);
     const [posts, setposts] = useState(null);
-    
-    
-      useEffect(() => {
-        getAlluser(setstateUser);
-        getAllPost(setposts);
-      console.log("datauser: ", stateUser);
-      console.log(posts);
-      }, []);
+    const [curentUser, setCurrentUser] = useState(null);
 
+const handleClick = (e) => {
+  const Id =  Number(e.target.id);
+  let arr = [];
+    for (const iterator of stateUser) {
+      const {id, name, username, company, active } = iterator;
+      let user;
+      if(Number(id) !== Id){
+         user = {
+          id:id,name:name,username:username,company:company, active:false
+        }
+      }else{
+       user = {
+        id:id,name:name,username:username,company:company, active:true
+        }
+        setCurrentUser(username);
+      }
+      arr.push(user);
+    }
+    setstateUser(arr);
+    getAllPost(setposts , Id)
+    console.log("setposts: ", posts);
+
+    
+}
+
+
+
+
+
+  useEffect(() => {
+    if(stateUser === null){
+      getAlluser(setstateUser);
+    }
+  }, []);
 
     return (
         <Section className='main'>
             <Header/>
-            <Slider   />
-            <Headerpost/>
+            <Slider props={stateUser} handleClick={handleClick} />
+         
+
+            <Headerpost name={curentUser}/>
+
             <div className="container">
-            <Post/>
-            <Post/>
-            <Post/>
+               {posts && posts.map(({title,body})=>(
+                <Post title={title} body={body} key={title} />
+              ))} 
             </div>
         </Section>
     );
 }
 
 export default Main;
+//id, user_nick, user_name
+
+
+
+

@@ -7,13 +7,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 //createRoot
-ReactDOM.render(
-  <React.StrictMode>
+// ReactDOM.render(
+//   <React.StrictMode>
     
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+const  container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+//const root = ReactDOMClient.hydrateRoot(container);
+root.render(<App/>);
+
+
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

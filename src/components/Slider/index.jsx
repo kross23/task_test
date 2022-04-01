@@ -14,8 +14,8 @@ margin-top:100px;
 `
 
 
-const Index = () => {
-    
+const Index = ({props, handleClick}) => {
+ 
     const settings = {
         dots: false,
         infinite: true,
@@ -26,16 +26,11 @@ const Index = () => {
       };
 
      // https://i.pravatar.cc/300?img=1
-const arr = [1,2,3,4,5,6,7,8,9,10]
-
-
     return (
         <Carosel>
         <Slider {...settings}>
-
-     {  arr.map((item)=>(
-
-           <Carduser id={item} key={item}/>
+     {props && props.map(({id, name, username, active})=>(
+            <Carduser id={id} key={id} username={username} name={name} handleClick={handleClick} active={active}/>
        ))}
 
         </Slider>
