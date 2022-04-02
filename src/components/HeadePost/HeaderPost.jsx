@@ -7,6 +7,7 @@ height: 128px;
 background:no-repeat 20% 50px/auto 78px url(${Covbg}) ;
 
 .container{
+    padding-top:51px;
     width:959px;
     margin-right: 100px;
     float: right;

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 const PostCard = styled.div`
 width: 100%;
 background-color: transparent;
-
+padding-top:20px;
 .post__title{
+    margin:0;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -14,6 +15,8 @@ background-color: transparent;
     background-color: transparent;
 }
 .post__body{
+    margin:0;
+    padding-top:7px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;

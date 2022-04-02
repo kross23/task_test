@@ -5,9 +5,10 @@ position: relative;
 .img{
     height: 320px;
     width: 290px;
-  
+    padding-bottom: 18px;
 }
 .title_name{
+   
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
@@ -26,7 +27,7 @@ position: relative;
 }
 .activeImg{
     position: absolute;
-    bottom: 61px;
+    bottom: 80px;
     left: 0;
     width: 91%;
     height: 5px;

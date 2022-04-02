@@ -1,19 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import * as ReactDOMClient from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//createRoot
-// ReactDOM.render(
-//   <React.StrictMode>
-    
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+
 const  container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 //const root = ReactDOMClient.hydrateRoot(container);
