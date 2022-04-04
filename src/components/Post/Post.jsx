@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 const PostCard = styled.div`
-width: 100%;
+ width: 100%;
 background-color: transparent;
 padding-top:20px;
+padding-left:10px;
+padding-right:10px;
 .post__title{
     margin:0;
     font-family: 'Poppins';
@@ -26,6 +28,12 @@ padding-top:20px;
     /* or 140% */
     
     color: #606F81;
+}
+@media (max-width: 768px) { 
+    .post__title{
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
 
 `

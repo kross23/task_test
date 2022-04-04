@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import "slick-carousel/slick/slick.css";
 
 const Carosel = styled.div`
-width: 1280px;
+max-width: 1280px;
 margin: 0 auto;
 margin-top:100px;
 `
@@ -20,29 +20,35 @@ const Index = ({props, handleClick}) => {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        speed: 500,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              slidesToScroll: 1,
+            
+              
             }
           },
           {
             breakpoint: 600,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+              slidesToScroll: 1,
+              centerMode:true,
+              centerPadding: "35px",
+              
             }
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              centerMode:true,
+              centerPadding: "25px",
+             
             }
           }
         ],

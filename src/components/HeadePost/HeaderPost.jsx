@@ -4,6 +4,7 @@ import Covbg from '../../image/covbg.png';
 const Hpost = styled.div`
 width: 100%;
 height: 128px;
+
 background:no-repeat 20% 50px/auto 78px url(${Covbg}) ;
 
 .container{
@@ -13,7 +14,9 @@ background:no-repeat 20% 50px/auto 78px url(${Covbg}) ;
     float: right;
 }
 h2{
+
     display: block;
+    
     text-align: left;
     font-family: 'Poppins';
     font-style: normal;
@@ -22,6 +25,17 @@ h2{
     line-height: 48px;
     color: #384758;
 }
+@media (max-width: 768px) { 
+    .container{
+        width:100%;
+        margin:0 auto;
+    }
+    h2{
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    }
+
 `
 
 const Headerpost = ({name='Moriah.Stanton', id}) => {

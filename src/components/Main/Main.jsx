@@ -15,12 +15,18 @@ padding-bottom: 600px;
 background: no-repeat 105% 25%/auto 330px url(${Covbg}),no-repeat -12% 100%/auto 330px url(${Covbg});
 z-index: 100;
 .container{
-    width:949px;
+   max-width:949px;
     background-color: transparent;
     margin-right: 100px;
+    margin-bottom:40px;
     padding: 0 5px;
-    float: right;
+    float: right;   
 }
+@media (max-width: 768px) { 
+  .container{
+      margin:0 auto;
+  }
+  }
 `
   
 

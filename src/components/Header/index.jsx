@@ -8,23 +8,41 @@ padding-bottom: 31px;
     display: block;
     text-align: center;
     padding-bottom:47px;
-   
     margin:0;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 20px;
-        color: #384758;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 20px;
+    color: #384758;
   }
   .header__desc{
     display: block;
-      text-align: center;
-      margin:0 auto;
+    text-align: center;
+    margin:0 auto;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
     color: #606F81;
-    width:432px;
+    max-width:432px;
   }
+  @media (max-width: 768px) { 
+   h1{
+    font-size: 38px;
+    line-height: 35px;
+    padding-bottom:37px;
+   }
+   .header__desc{
+    text-align: center;
+    margin:0 auto;
+    padding:0 5px
+  font-size: 16px;
+  line-height: 27px;
+   }
+  }
+  
+ 
+
+
+
 `;
 
 const Index = () => {
