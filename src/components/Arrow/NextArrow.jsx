@@ -8,20 +8,13 @@ width: 48px;
 position: absolute;
 top:-70px;
 left:calc(50% );
-`
-
-
-
+`;
 const Nextarrow = (props) => {
 		const { className,  onClick } = props;
 		return (
-
-			<Narrow
-				className={className}
-				onClick={onClick}
-			>
-					<img src={arrowRight}/>
-					</Narrow>
+			<Narrow className={className} onClick={onClick}>
+				<img src={arrowRight}/>
+			</Narrow>
 		);
 }
 

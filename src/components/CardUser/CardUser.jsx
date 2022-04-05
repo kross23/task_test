@@ -3,15 +3,12 @@ import styled from 'styled-components';
 const Card = styled.div`
 position: relative;
 margin:0 auto;
-
 .image{
     position: relative;
     height: 320px;
     width: 290px;
     padding-bottom: 18px;
     &-active{
-
-
         &::after{
             position: absolute;
             content:'';
@@ -27,13 +24,9 @@ margin:0 auto;
 }
 .img{
     height: 100%;
-    width: 100%;
-   
-    
+    width: 100%;  
 }
-
-.title_name{
-   
+.title_name{  
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
@@ -50,19 +43,13 @@ margin:0 auto;
 .activeuser{
    color:#FE8700;
 }
-
-`
-
+`;
 const Carduser = ({id, name, username, handleClick, active}) => {
-
-
-
     return (       
             active? <Card onClick={handleClick} id ={id}  >
                 <div className="image image-active">
                     <img className='img' id ={id} src={`https://i.pravatar.cc/300?img=${id}`} alt="" />
-                </div>
-            
+                </div> 
             <div className="title_name activeuser">{name}</div>
             <div className="title_username activeuser">{username}</div>
             </Card> 
@@ -70,8 +57,7 @@ const Carduser = ({id, name, username, handleClick, active}) => {
             <Card onClick={handleClick} id ={id}  >
                 <div className="image">
                 <img className='img' id ={id} src={`https://i.pravatar.cc/300?img=${id}`} alt="" />
-                </div>
-           
+                </div>      
             <div className="title_name">{name}</div>
             <div className="title_username">{username}</div>
         </Card> 

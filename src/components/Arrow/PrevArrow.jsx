@@ -8,9 +8,7 @@ width: 48px;
 position: absolute;
 top:-70px;
 left:calc(50% - 78px);
-`
-
-
+`;
 const Prevarrow = (props) => {
     const { className,  onClick } = props;
     return (
