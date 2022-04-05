@@ -15,7 +15,7 @@ padding-bottom: 600px;
 background: no-repeat 105% 25%/auto 330px url(${Covbg}),no-repeat -12% 100%/auto 330px url(${Covbg});
 z-index: 100;
 .container{
-   max-width:949px;
+    max-width:949px;
     background-color: transparent;
     margin-right: 100px;
     margin-bottom:40px;
@@ -27,10 +27,7 @@ z-index: 100;
       margin:0 auto;
   }
   }
-`
-  
-
-
+`;
 const Main = () => {
     const [stateUser, setstateUser] = useState(null);
     const [posts, setposts] = useState(null);
@@ -38,31 +35,25 @@ const Main = () => {
  
 const handleClick = (e) => {
   const Id =  Number(e.target.id);
-  let arr = [];
-    for (const iterator of stateUser) {
-      const {id, name, username, company, active } = iterator;
-      let user;
-      if(Number(id) !== Id){
-         user = {
-          id:id,name:name,username:username,company:company, active:false
-        }
-      }else{
-       user = {
-        id:id,name:name,username:username,company:company, active:true
-        }
-        setCurrentUser(username);
-      }
-      arr.push(user);
-    }
-    setstateUser(arr);
-    getAllPost(setposts , Id)  
+    //!refactory
+	let usernew =  stateUser.reduce((acc, user) => {
+		if (user.id === Id) {
+			 return ( [...acc, { ...user, active:true }]); 
+		}else{
+			return ( [...acc, { ...user, active:false }]);
+		}
+	  }, []);
+	const [{username}] = usernew.filter( ({username, id}) => Id === id);
+	setCurrentUser(username);
+    setstateUser(usernew);
+    getAllPost(setposts , Id);  
 }
 
-  useEffect(() => {
+useEffect(() => {
     if(stateUser === null){
       getAlluser(setstateUser);
     }
-  }, []);
+}, []);
 
     return (
         <Section className='main'>
