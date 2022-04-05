@@ -33,16 +33,11 @@ padding-bottom: 31px;
    .header__desc{
     text-align: center;
     margin:0 auto;
-    padding:0 5px
+    padding:0 5px;
   font-size: 16px;
   line-height: 27px;
    }
   }
-  
- 
-
-
-
 `;
 
 const Index = () => {

@@ -13,16 +13,16 @@ left:calc(50% );
 
 
 const Nextarrow = (props) => {
-    const { className,  onClick } = props;
-    return (
+		const { className,  onClick } = props;
+		return (
 
-      <Narrow
-        className={className}
-        onClick={onClick}
-      >
-          <img src={arrowRight}/>
-          </Narrow>
-    );
+			<Narrow
+				className={className}
+				onClick={onClick}
+			>
+					<img src={arrowRight}/>
+					</Narrow>
+		);
 }
 
 export default Nextarrow;

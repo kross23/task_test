@@ -34,11 +34,12 @@ h2{
         font-size: 28px;
         padding: 0 10px;
     }
-    }
+}
 
 `
 
-const Headerpost = ({name='Moriah.Stanton', id}) => {
+const Headerpost = ({name ='Moriah.Stanton', id}) => {
+
     return (
         <Hpost>
             <div className="container">
