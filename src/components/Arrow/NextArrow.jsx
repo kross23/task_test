@@ -13,7 +13,7 @@ const Nextarrow = (props) => {
     const { className, onClick } = props;
     return (
         <Narrow className={className} onClick={onClick}>
-            <img src={arrowRight} />
+            <img src={arrowRight} alt="next" />
         </Narrow>
     );
 };

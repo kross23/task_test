@@ -54,7 +54,7 @@ const Main = () => {
         if (stateUser === null) {
             getAlluser(setstateUser);
         }
-    }, []);
+    }, [stateUser]);
 
     return (
         <Section className="main">

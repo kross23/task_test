@@ -13,7 +13,7 @@ const Prevarrow = (props) => {
     const { className, onClick } = props;
     return (
         <Parrow className={className} onClick={onClick}>
-            <img src={arrowLeft} />
+            <img src={arrowLeft} alt="prev" />
         </Parrow>
     );
 };
