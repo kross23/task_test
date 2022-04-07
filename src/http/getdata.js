@@ -1,7 +1,9 @@
+const API_USERS = process.env.REACT_APP_API + 'users'
+const API_POSTS = process.env.REACT_APP_API + 'posts?userId=';
 
 
 export const getAlluser = async ( calback) => {
-  const data = await  fetch(process.env.REACT_APP_GET_USER)
+  const data = await  fetch(API_USERS)
   .then((resp) => resp.json())
   .then( data => {
    return data;
@@ -24,7 +26,7 @@ calback(arrayData);
 
 
 export const getAllPost = async (calback, id) => {
-  const data = await fetch(`${process.env.REACT_APP_GET_POST}${id}`)
+  const data = await fetch(`${API_POSTS}${id}`)
   .then((response) => response.json())
   .then((json) => {return json})
   .catch( error => {
