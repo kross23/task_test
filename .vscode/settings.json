@@ -1,0 +1,7 @@
+{
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.definitionLinkOpensInPeek": false,
+    "editor.dragAndDrop": false,
+    "editor.fontLigatures": true
+}
